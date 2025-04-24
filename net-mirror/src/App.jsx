@@ -4,6 +4,8 @@ import Loading from './Components/Loading';
 import MovieCard from './Components/MovieCard';
 import { useDebounce } from 'react-use'
 import { getTrendingMovies, updateSearchCount } from './appwrite';
+import heroImg from "./assets/hero.png";
+
 // import { updateSearchCount } from './firebaseUtils_TEMP';
 
 
@@ -90,7 +92,7 @@ const App = () => {
     <main>
       <section className="main-con">
         <div className="con1">
-          <img src="./hero.png" alt="" />
+          <img src={heroImg} alt="" />
           <h1>Find <span className='txt-span'>Movies</span> that You'll Enjoy without The Hustle</h1>
         </div>
       </section>

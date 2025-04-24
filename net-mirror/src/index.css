@@ -40,7 +40,7 @@ main {
 
 .main-con {
     width: 100%;
-    background: url("./hero-bg.png");
+    background: url("./assets/hero-bg.png");
     background-size: cover;
 }
 
