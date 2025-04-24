@@ -1,0 +1,290 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body {
+    background: #030014;
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    width: 100%;
+}
+
+h1 {
+    font-size: 36px;
+    /* ✅ UPDATED for mobile */
+    width: 100%;
+    /* ✅ UPDATED for mobile */
+    padding: 0 1rem;
+    /* ✅ UPDATED for spacing on small screens */
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 2px;
+}
+
+@media (min-width: 640px) {
+    h1 {
+        font-size: 64px;
+        line-height: 76px;
+        width: 750px;
+    }
+}
+
+main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.main-con {
+    width: 100%;
+    background: url("./hero-bg.png");
+    background-size: cover;
+}
+
+.con1 img {
+    width: 100%;
+    /* ✅ Make it scale responsively */
+    max-width: 500px;
+    /* ✅ Limit max size */
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+
+.con1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    /* ✅ NEW: for better mobile spacing */
+    text-align: center;
+    /* ✅ NEW: helps center content */
+}
+
+.con1 img {
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.txt-span {
+    background: linear-gradient(to right, #ff9ce3, #c084fc, #7dd3fc);
+    background-clip: text;
+    color: transparent;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-con {
+    max-width: 980px;
+    /* ✅ UPDATED: limit on large screens */
+    width: 100%;
+    /* ✅ UPDATED: fully responsive */
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: inset 0 0 0 1px hsl(232, 92%, 15%);
+}
+
+.search-con img {
+    width: 30px;
+    margin-right: 20px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.search-con input {
+    width: 100%;
+    background: transparent;
+    font-size: 20px;
+    padding: 5px;
+    color: #e5e7eb;
+}
+
+.search input::placeholder {
+    color: var(--color-light-200);
+}
+
+/* Ui Component style Start */
+
+.spinner {
+    background-image: linear-gradient(rgb(186, 66, 255) 35%, rgb(0, 225, 255));
+    width: 50px;
+    height: 50px;
+    animation: spinning82341 1.7s linear infinite;
+    text-align: center;
+    border-radius: 50px;
+    filter: blur(1px);
+    box-shadow: 0px -5px 20px 0px rgb(186, 66, 255), 0px 5px 20px 0px rgb(0, 225, 255);
+}
+
+.spinner1 {
+    background-color: rgb(36, 36, 36);
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    filter: blur(10px);
+}
+
+@keyframes spinning82341 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* UI Component Style Complete */
+
+.movie-sec {
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+}
+
+.movie-sec ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* ✅ UPDATED: mobile-first layout */
+    gap: 1.25rem;
+}
+
+@media (min-width: 480px) {
+    .movie-sec ul {
+        grid-template-columns: repeat(2, 1fr);
+        /* ✅ NEW */
+    }
+}
+
+@media (min-width: 768px) {
+    .movie-sec ul {
+        grid-template-columns: repeat(3, 1fr);
+        /* ✅ NEW */
+    }
+}
+
+@media (min-width: 1024px) {
+    .movie-sec ul {
+        grid-template-columns: repeat(4, 1fr);
+        /* ✅ NEW */
+    }
+}
+
+.movie-card {
+    background-color: #0f0d23;
+    padding: 15px;
+    border-radius: 1rem;
+    box-shadow: inset 0 4px 6px rgba(206, 206, 251, 0.1);
+    cursor: pointer;
+}
+
+.movie-card img {
+    border-radius: 0.5rem;
+    height: auto;
+    width: 100%;
+}
+
+.movie-sec h2 {
+    font-size: 30px;
+    /* ✅ UPDATED for mobile */
+    text-align: center;
+    /* ✅ NEW: better on small screens */
+    margin-top: 40px;
+}
+
+@media (min-width: 640px) {
+    .movie-sec h2 {
+        font-size: 50px;
+        text-align: left;
+        margin-left: 20px;
+        /* ✅ ADJUSTED for larger screens */
+    }
+}
+
+.movie-content h3 {
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.rating {
+    display: flex;
+    width: 100px;
+    height: auto;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.rating img {
+    width: 20px;
+    height: 20px;
+}
+
+.trending {
+    margin-top: 5rem;
+}
+
+.trending h2 {
+    font-size: 30px;
+    /* ✅ UPDATED for mobile */
+    text-align: center;
+    /* ✅ NEW: better on small screens */
+    letter-spacing: 2px;
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 640px) {
+    .trending h2 {
+        font-size: 50px;
+        margin-bottom: 30px;
+        margin-top: -20px;
+        text-align: left;
+        margin-left: 50px;
+        /* ✅ ADJUSTED for larger screens */
+    }
+}
+
+.trending ul {
+    display: flex;
+    flex-direction: row;
+    overflow-y: auto;
+    gap: 1.25rem;
+    margin-top: -2.5rem;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.trending ul::-webkit-scrollbar {
+    display: none;
+}
+
+.trending ul li {
+    min-width: 230px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.trending ul li p {
+    font-family: "Bebas Neue", sans-serif;
+    -webkit-text-stroke: 5px rgba(206, 206, 251, 0.5);
+    font-size: 190px;
+    margin-top: 22px;
+    white-space: nowrap;
+}
+
+.trending ul li img {
+    width: 160px;
+    height: 163px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    margin-left: -0.875rem;
+}
